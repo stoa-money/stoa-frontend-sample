@@ -1,0 +1,170 @@
+@import "tailwindcss";
+
+:root {
+  --background: #F8F6F5;
+  --foreground: #0F172A;
+  --primary: #6C0088;
+  --primary-foreground: #ffffff;
+  --card: #ffffff;
+  --card-foreground: #0F172A;
+  --border: #e5e5e5;
+  --input: #e5e5e5;
+  --ring: #6C0088;
+  --radius: 0.75rem;
+  --muted: #f5f5f5;
+  --muted-foreground: #334155;
+  --accent: #e5e5e5;
+  --accent-foreground: #0F172A;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --secondary: #f5f5f5;
+  --secondary-foreground: #1E293B;
+  --popover: #ffffff;
+  --popover-foreground: #0F172A;
+}
+
+* {
+  border-color: var(--border);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-feature-settings: "rlig" 1, "calt" 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(209 213 219);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(156 163 175);
+}
+
+/* Focus styles */
+*:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--background), 0 0 0 4px rgb(108 0 136 / 0.2);
+}
+
+/* Global cursor styles for interactive elements */
+a,
+button,
+[role="button"],
+[type="button"],
+[type="submit"],
+[type="reset"],
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* Ensure disabled elements don't have pointer cursor */
+button:disabled,
+[role="button"]:disabled,
+[type="button"]:disabled,
+[type="submit"]:disabled,
+[type="reset"]:disabled,
+.cursor-not-allowed {
+  cursor: not-allowed;
+}
+
+/* Button styles */
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  border-radius: 9999px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  transition: all 150ms;
+}
+
+.btn-primary:hover {
+  background-color: rgb(108 0 136 / 0.9);
+}
+
+.btn-secondary {
+  background-color: rgb(243 244 246);
+  color: rgb(55 65 81);
+  border-radius: 9999px;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 150ms;
+}
+
+.btn-secondary:hover {
+  background-color: rgb(229 231 235);
+}
+
+/* Badge styles */
+.badge-green {
+  background-color: #22c55e;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.badge-purple {
+  background-color: #6C0088;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.badge-gray {
+  background-color: rgb(243 244 246);
+  color: rgb(55 65 81);
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+/* Card styles */
+.card-elevated {
+  background-color: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+}
+
+.card-interactive {
+  background-color: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  transition: box-shadow 200ms;
+  cursor: pointer;
+}
+
+.card-interactive:hover {
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.07), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+}
+
+/* FSCS Banner */
+.fscs-banner {
+  background-color: #6C0088;
+  color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+}
